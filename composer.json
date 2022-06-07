@@ -1,0 +1,20 @@
+{
+    "name": "tomener/phpmock",
+    "description": "phpmock is a simulation data generator, mock data generator",
+    "type": "library",
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "tomener",
+            "email": "863758705@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mock\\": "src"
+        }
+    }
+}
