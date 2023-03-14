@@ -10,10 +10,13 @@ namespace Tomener\Phpmock;
 
 use Tomener\Phpmock\Random\Basic;
 use Tomener\Phpmock\Random\Name;
+use Tomener\Phpmock\Random\Text;
 
 class Mock
 {
     use Basic;
 
     use Name;
+
+    use Text;
 }

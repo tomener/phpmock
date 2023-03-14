@@ -34,4 +34,26 @@ $name = Mock::cname(); //随机生成2~3长度的姓名
 var_dump($name);
 $name = Mock::cname(3); //指定姓名长度，傅婉承
 var_dump($name);
+
+//生成一个随机字符
+$char = Mock::char('alphanumber');
+var_dump($char);
+
+//生成一个单词
+$word = Mock::word();
+var_dump($word);
+var_dump(Mock::cword());
+
+//生成一个句子
+$sentence = Mock::sentence();
+var_dump($sentence);
+var_dump(Mock::csentence());
+
+//生成一段文本
+var_dump(Mock::paragraph());
+var_dump(Mock::cparagraph());
+
+//生成一个标题
+var_dump(Mock::title());
+var_dump(Mock::ctitle());
 ```

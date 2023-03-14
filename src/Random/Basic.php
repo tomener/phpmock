@@ -67,6 +67,37 @@ trait Basic
         return floatval(mt_rand($min, $max - 1) . '.' . $f);
     }
 
+    /**
+     * 返回一个随机字符
+     *
+     * @param $pool
+     * @return false|string
+     */
+    public static function char($pool = 'default')
+    {
+        $pools = [
+            'lower' => 'abcdefghijklmnopqrstuvwxyz',
+            'upper' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+            'number' => '0123456789',
+            'symbol' => '!@#$%^&*()[]',
+        ];
+        $pools['alpha'] = $pools['lower'] . $pools['upper'];
+        $pools['alphanumber'] = $pools['lower'] . $pools['upper'] . $pools['number'];
+        $pools['default'] = $pools['lower'] . $pools['upper'] . $pools['number'] . $pools['symbol'];
+        if (isset($pools[$pool])) {
+            $pool = $pools[$pool];
+        }
+        $pool = str_shuffle($pool);
+        return substr($pool, mt_rand(0, strlen($pool) - 1), 1);
+    }
+
+    /**
+     * 返回一个随机字符串
+     *
+     * @param $min
+     * @param $max
+     * @return string
+     */
     public static function string($min, $max)
     {
         $length = mt_rand($min, $max);
